@@ -266,24 +266,27 @@ ul.partners_collab li{
 }
 
 .products {
-	display: flex;
-	text-align: center;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 450px));
+	grid-gap: 5%;
+	justify-content: center;
 }
 
 .juice {
-	flex-basis: 50%;
 	text-align: center;
 }
 
 .juice_box {
 	border: solid 1px #ead6ac;
 	background-color: #ffffff;
-	margin: 10% 8% 4% 35%;
 	box-shadow: 0 0 70px -35px;
+	width: 100%;
+	margin-bottom: 3%;
 }
 
 .juice img {
-	height: 320px;
+	height: 100%;
+	max-height: 300px;
 }
 
 .juice h2 {
@@ -291,7 +294,8 @@ ul.partners_collab li{
     font-family: "Poppins", Sans-serif;
     font-size: 19px;
     font-weight: 600;
-    padding: 3% 6% 3% 6%;
+    padding: 3% 12% 3% 12%;
+    text-align: justify;
 }
 
 .juice p {
@@ -299,13 +303,13 @@ ul.partners_collab li{
     font-family: "Lora", Sans-serif;
     font-size: 15px;
     line-height: 1.6em;
-    text-align: center;
+    text-align: justify;
     padding: 3% 12% 3% 12%;
 }
 
 .juice_description {
-	margin: 0% 8% 4% 35%;
 	box-shadow: 0 0 70px -35px;
+	margin-bottom: 3%;
 }
 
 .juice_description p {
@@ -317,19 +321,19 @@ ul.partners_collab li{
 }
 
 .cider {
-	flex-basis: 50%;
+	text-align: center;
 }
 
 .cider_box {
 	border: solid 1px #ead6ac;
 	background-color: #ffffff;
-	margin: 10% 35% 4% 8%;
 	box-shadow: 0 0 70px -35px;
-
+	margin-bottom: 3%;
 }
 
 .cider img {
-	height: 320px;
+	height: 100%;
+	max-height: 300px;
 }
 
 .cider h2 {
@@ -337,7 +341,8 @@ ul.partners_collab li{
     font-family: "Poppins", Sans-serif;
     font-size: 19px;
     font-weight: 600;
-    padding: 3% 6% 3% 6%;
+    padding: 3% 12% 3% 12%;
+    text-align: justify;
 }
 
 .cider p {
@@ -349,8 +354,8 @@ ul.partners_collab li{
 }
 
 .cider_description {
-	margin: 0% 35% 4% 8%;
 	box-shadow: 0 0 70px -35px;
+	margin-bottom: 3%;
 }
 
 .cider_description p {
@@ -738,6 +743,7 @@ ul.social_media a:hover{
 footer {
 	background-color: #a1a19c;
 	padding: 2% 0 2% 0;
+	margin-top: 17%;
 }
 
 .footer_border {
@@ -776,10 +782,17 @@ footer a:hover {
 and (min-device-width: 320px)
 and (max-device-width: 568px) {
 
+
+/* убираем длинное меню навигации */
 .menubar{
 	display: none;
 }
 
+footer{
+	margin-top: 10%;
+}
+
+/* подключаем складное меню для мобильных устройств */
 .burger_wrapper {
 	transform: scale(1);
 	margin: 3% auto;
@@ -872,5 +885,52 @@ label.label_menu{
 #check_menu:checked ~ .fourth{
 	display: none;
 }
+
+
+
+.background_brown {
+	width: 100%;
+	padding: 5%;
+}
+
+.background_brown_content_wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	width: 100%;
+}
+
+.background_brown_content_wrapper_img img, .background_brown_content_wrapper_img iframe {
+	float: none;
+	width: 100%;
+	height: 100%;
+	min-height: 300px;
+	margin-right: 0;
+	overflow: hidden;
+}
+
+
+
+
+.background_brown_right {
+	width: 100%;
+	margin: 5% 0;
+	padding: 5%;
+}
+
+.background_brown_right_wrapper {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+	width: 100%;
+	margin-left: 0;
+}
+
+.team_s1{
+	margin-bottom: 25%;
+}
+
+
+
+
+
 
 }
